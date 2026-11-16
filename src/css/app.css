@@ -1,0 +1,308 @@
+/* ==========================================================================
+   Systemia - estilos globales
+   Paleta, tipografía (Poppins) y clases de utilidad de la guía de marca.
+   ========================================================================== */
+
+/* Poppins instalada localmente (@fontsource/poppins): Light, Regular, Medium, Semibold, Bold */
+@import '@fontsource/poppins/300.css';
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/500.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+
+/* --------------------------------------------------------------------------
+   1. Variables (tokens)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Colores principales */
+  --sy-verde-oscuro: #0b3d37; /* Confianza, estabilidad, profesionalismo */
+  --sy-verde-principal: #00c896; /* Innovación, crecimiento, tecnología */
+  --sy-turquesa: #5eead4; /* Creatividad, dinamismo, cercanía */
+  --sy-verde-claro: #e6fbf4; /* Equilibrio, claridad, sencillez */
+  --sy-gris-oscuro: #1f2937; /* Elegancia, contraste, legibilidad */
+
+  /* Colores de apoyo */
+  --sy-gris-medio: #6b7280; /* Texto secundario, iconos */
+  --sy-gris-claro: #cbd5e1; /* Fondos, bordes */
+  --sy-blanco: #ffffff; /* Espacios, limpieza visual */
+  --sy-negro: #000000; /* Contrastes, tipografía */
+
+  /* Derivados de uso frecuente */
+  --sy-fondo: #f8fafb;
+  --sy-borde: #e2e8f0;
+  --sy-degradado-oscuro: linear-gradient(135deg, #0b3d37 0%, #0f4c44 55%, #12332f 100%);
+
+  /* Tipografía */
+  --sy-fuente: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --sy-h1: clamp(3rem, 2.5rem + 1.5vw, 3.5rem); /* 48–56px */
+  --sy-h2: clamp(1.75rem, 1.5rem + 0.8vw, 2.25rem); /* 28–36px */
+  --sy-h3: clamp(1.25rem, 1.1rem + 0.4vw, 1.5rem); /* 20–24px */
+  --sy-parrafo: clamp(0.875rem, 0.8rem + 0.25vw, 1rem); /* 14–16px */
+  --sy-etiqueta: clamp(0.875rem, 0.8rem + 0.25vw, 1rem); /* 14–16px */
+
+  /* Formas */
+  --sy-radio-sm: 8px;
+  --sy-radio: 12px;
+  --sy-radio-lg: 16px;
+  --sy-sombra: 0 4px 16px rgba(11, 61, 55, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   2. Base
+   -------------------------------------------------------------------------- */
+body {
+  font-family: var(--sy-fuente);
+  font-size: var(--sy-parrafo);
+  color: var(--sy-gris-oscuro);
+  background: var(--sy-fondo);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--sy-fuente);
+  color: inherit;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--sy-h1);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: var(--sy-h2);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: var(--sy-h3);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Botones de Quasar en tipografía de la guía (sin mayúsculas, Poppins Medium) */
+.q-btn {
+  text-transform: none;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   3. Jerarquía tipográfica (clases)
+   -------------------------------------------------------------------------- */
+.texto-titulo {
+  font-size: var(--sy-h1);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.texto-subtitulo {
+  font-size: var(--sy-h2);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.texto-seccion {
+  font-size: var(--sy-h3);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.texto-parrafo {
+  font-size: var(--sy-parrafo);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.texto-etiqueta {
+  font-size: var(--sy-etiqueta);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Pesos de Poppins */
+.peso-light {
+  font-weight: 300 !important;
+}
+.peso-regular {
+  font-weight: 400 !important;
+}
+.peso-medium {
+  font-weight: 500 !important;
+}
+.peso-semibold {
+  font-weight: 600 !important;
+}
+.peso-bold {
+  font-weight: 700 !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Colores (texto, fondo y borde)
+   -------------------------------------------------------------------------- */
+.text-verde-oscuro {
+  color: var(--sy-verde-oscuro) !important;
+}
+.text-verde-principal {
+  color: var(--sy-verde-principal) !important;
+}
+.text-turquesa {
+  color: var(--sy-turquesa) !important;
+}
+.text-verde-claro {
+  color: var(--sy-verde-claro) !important;
+}
+.text-gris-oscuro {
+  color: var(--sy-gris-oscuro) !important;
+}
+.text-gris-medio {
+  color: var(--sy-gris-medio) !important;
+}
+.text-gris-claro {
+  color: var(--sy-gris-claro) !important;
+}
+
+.bg-verde-oscuro {
+  background-color: var(--sy-verde-oscuro) !important;
+}
+.bg-verde-principal {
+  background-color: var(--sy-verde-principal) !important;
+}
+.bg-turquesa {
+  background-color: var(--sy-turquesa) !important;
+}
+.bg-verde-claro {
+  background-color: var(--sy-verde-claro) !important;
+}
+.bg-gris-oscuro {
+  background-color: var(--sy-gris-oscuro) !important;
+}
+.bg-gris-medio {
+  background-color: var(--sy-gris-medio) !important;
+}
+.bg-gris-claro {
+  background-color: var(--sy-gris-claro) !important;
+}
+.bg-fondo {
+  background-color: var(--sy-fondo) !important;
+}
+.bg-degradado-oscuro {
+  background: var(--sy-degradado-oscuro) !important;
+}
+
+.borde-verde-principal {
+  border: 1px solid var(--sy-verde-principal) !important;
+}
+.borde-gris-claro {
+  border: 1px solid var(--sy-gris-claro) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Elementos de interfaz de la guía
+   -------------------------------------------------------------------------- */
+
+/* Emblema de Systemia (src/assets/systemia-emblema.png) */
+.emblema {
+  display: block;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.emblema--md {
+  width: 40px;
+  height: 40px;
+}
+.emblema--lg {
+  width: 56px;
+  height: 56px;
+}
+
+/* Fondo blanco para el emblema sobre superficies verdes (p. ej. el header) */
+.emblema-insignia {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  background: var(--sy-blanco);
+  border-radius: var(--sy-radio-sm);
+}
+.emblema-insignia .emblema {
+  width: 28px;
+  height: 28px;
+}
+
+/* Palabra resaltada en verde: "soluciones", "proyecto", "prioridad" */
+.texto-destacado {
+  color: var(--sy-verde-principal);
+}
+
+/* Línea corta de acento bajo títulos y banners */
+.linea-acento {
+  display: block;
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--sy-verde-principal);
+}
+
+/* Tarjeta blanca básica */
+.tarjeta {
+  background: var(--sy-blanco);
+  border: 1px solid var(--sy-borde);
+  border-radius: var(--sy-radio-lg);
+  box-shadow: var(--sy-sombra);
+  padding: 24px;
+}
+
+/* Banner oscuro: "Más que software...", "Tu proyecto, nuestra prioridad" */
+.banner-oscuro {
+  background: var(--sy-degradado-oscuro);
+  color: var(--sy-blanco);
+  border-radius: var(--sy-radio-lg);
+  padding: 32px;
+}
+
+/* Tarjeta con icono: Seguridad, Innovación, Soporte, Crecimiento */
+.tarjeta-icono {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  min-width: 96px;
+  background: var(--sy-verde-claro);
+  border: 1px solid #c9efe2;
+  border-radius: var(--sy-radio);
+  color: var(--sy-verde-oscuro);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.tarjeta-icono:hover {
+  border-color: var(--sy-verde-principal);
+  transform: translateY(-2px);
+}
+
+/* Enlace con flecha: "Ver servicios →" */
+.enlace-flecha {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--sy-verde-principal);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.enlace-flecha:hover {
+  text-decoration: underline;
+}
